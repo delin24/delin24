@@ -11,7 +11,7 @@ const Header = () => {
       </Link>
 
       <nav>
-        <ul className="flex gap-20 text-xl">
+        <ul className="flex gap-20 text-xl font-normal">
           <li>
             <Link href="/" className="hover:text-gray-200">
               Таможенное оформление
