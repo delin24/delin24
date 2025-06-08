@@ -1,14 +1,16 @@
 // stores/useModalStore.ts
 import { create } from "zustand";
 
+export type ModalType = "none" | "form" | "policy";
+
 interface ModalStore {
-  isOpen: boolean;
-  open: () => void;
+  type: ModalType;
+  open: (type: ModalType) => void;
   close: () => void;
 }
 
 export const useModalStore = create<ModalStore>((set) => ({
-  isOpen: false,
-  open: () => set({ isOpen: true }),
-  close: () => set({ isOpen: false }),
+  type: "none",
+  open: (type) => set({ type }),
+  close: () => set({ type: "none" }),
 }));

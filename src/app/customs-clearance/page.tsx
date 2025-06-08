@@ -1,6 +1,6 @@
 "use client";
-import Hero from "@/components/blocks/Hero";
 import { useModalStore } from "@/stores/useModalStore";
+import Hero from "@/components/blocks/Hero";
 import clearanceImg from "@public/clearanceImg.jpg";
 import { Section } from "@/components/blocks/Section";
 import BoxTitle from "@/components/blocks/BoxTitle";
@@ -407,7 +407,7 @@ export default function CustomsClearancePage() {
               <Button
                 text="Оставить заявку"
                 icon={iconArrow.src}
-                onClick={open}
+                onClick={() => open("form")}
               />
             </div>
           </div>

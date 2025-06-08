@@ -7,6 +7,9 @@ import { useModalStore } from "@/stores/useModalStore";
 import Modal from "@/components/ui/Modal";
 import FeedbackForm from "@/components/ui/FeedbackForm";
 import BoxTitle from "@/components/blocks/BoxTitle";
+import { Toaster } from "react-hot-toast";
+import Policy from "@/components/blocks/Policy";
+import { YandexMetrika } from "@/components/YandexMetrika";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,19 +26,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { isOpen, close } = useModalStore();
+  const { type, close } = useModalStore();
+  const isOpen = type !== "none";
   return (
     <html lang="en" className={` ${inter.className} flex justify-center`}>
       <body>
         <div className="flex w-[90rem] flex-col justify-center gap-2 px-16 py-2">
+          <YandexMetrika
+            id={Number(process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID)}
+          />
+          <Toaster position="top-center" />
           <Header />
           {children}
           <Modal isOpen={isOpen} onClose={close}>
-            <BoxTitle
-              title="Оставьте заявку — и мы подберём для вас лучшее решение!"
-              className="text-black"
-            />
-            <FeedbackForm className="text-black" />
+            {type === "form" && (
+              <>
+                <BoxTitle title="Оставьте заявку" className="text-black" />
+                <FeedbackForm className="text-black" />
+              </>
+            )}
+
+            {type === "policy" && <Policy />}
           </Modal>
           <Footer />
         </div>

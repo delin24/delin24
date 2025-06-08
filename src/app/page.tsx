@@ -97,7 +97,7 @@ export default function Home() {
         <Button
           text="Получить консультацию"
           icon={iconArrow.src}
-          onClick={open}
+          onClick={() => open("form")}
         />
       </Section>
 
@@ -150,7 +150,11 @@ export default function Home() {
             </li>
           ))}
         </div>
-        <Button text="Оставить заявку" icon={iconArrow.src} onClick={open} />
+        <Button
+          text="Оставить заявку"
+          icon={iconArrow.src}
+          onClick={() => open("form")}
+        />
       </Section>
 
       {/* <Reviews /> */}

@@ -40,7 +40,7 @@ export default function SourcingPage() {
         subtitle="Ваш мост между Россией и Китаем — находим проверенных поставщиков, экономим ваши деньги и нервы."
         buttonText="Начать поиск"
         image={Hero3.src}
-        className="text-black"
+        className="text-[#1B1B1B]"
       />
 
       <Section>
@@ -382,7 +382,9 @@ export default function SourcingPage() {
                 </div>
               ),
             )}
-            <Button text="Скачать полный прайс" icon={iconArrow.src} />
+            <a href="/price_list.docx" download>
+              <Button text="Скачать полный прайс" icon={iconArrow.src} />
+            </a>
           </div>
         </div>
         <p className="text-shadow-black text-xl">
