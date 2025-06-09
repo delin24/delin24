@@ -3,7 +3,11 @@ import { SectionProps } from "./Section";
 
 const BoxSubTitle: React.FC<SectionProps> = ({ children, className = "" }) => {
   return (
-    <p className={`w-2/3 select-none pb-6 text-xl ${className}`}>{children}</p>
+    <p
+      className={`select-none pb-4 text-xs md:w-2/3 md:pb-6 md:text-xl ${className}`}
+    >
+      {children}
+    </p>
   );
 };
 

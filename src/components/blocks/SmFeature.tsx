@@ -4,9 +4,11 @@ import Image from "next/image";
 
 const SmFeature: React.FC<FeatureProps> = ({ feature }) => {
   return (
-    <div className="flex flex-1 select-none flex-col gap-4 rounded-2xl bg-white p-8 shadow-lg">
-      <Image src={feature.icon} alt={feature.alt} width={64} height={64} />
-      <p className="text-xl text-[#1B1B1B]">{feature.text}</p>
+    <div className="flex flex-1 select-none flex-col gap-4 rounded-2xl bg-white p-4 shadow-lg md:p-8">
+      <div className="relative h-12 w-12 md:h-16 md:w-16">
+        <Image src={feature.icon} alt={feature.alt} fill sizes="auto" />
+      </div>
+      <p className="text-xs text-[#1B1B1B] md:text-xl">{feature.text}</p>
     </div>
   );
 };

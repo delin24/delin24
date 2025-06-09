@@ -22,11 +22,13 @@ const Hero: React.FC<HeroProps> = ({
   const { open } = useModalStore();
   return (
     <section
-      className={`rounded-4xl relative h-[47.125rem] overflow-hidden shadow-2xl shadow-[#2D2D5840] ${className ?? ""}`}
+      className={`rounded-4xl relative h-[334px] overflow-hidden shadow-2xl shadow-[#2D2D5840] md:h-[47.125rem] ${className ?? ""}`}
     >
-      <div className="flex w-full flex-col gap-6 px-10 py-20">
-        <h1 className="w-2/3 text-5xl font-bold">{title}</h1>
-        <h2 className="w-2/3 pb-6 text-xl">{subtitle}</h2>
+      <div className="flex w-full flex-col gap-4 px-4 py-8 md:gap-6 md:px-10 md:py-20">
+        <h1 className="text-[22px] font-bold md:w-2/3 md:text-5xl">{title}</h1>
+        <h2 className="w-4/5 text-xs md:w-2/3 md:pb-6 md:text-xl">
+          {subtitle}
+        </h2>
         <Button text={buttonText} onClick={() => open("form")} />
       </div>
       <Image src={image} alt="main" fill className="-z-10" priority />

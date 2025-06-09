@@ -42,7 +42,7 @@ export default function Home() {
 
       <Section>
         <BoxTitle title="С нами надежно" />
-        <div className="flex w-full gap-6">
+        <div className="flex w-full flex-col gap-2 md:flex-row md:gap-6">
           {[
             {
               icon: iconFullCircle.src,
@@ -65,15 +65,16 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-[#48896E] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="bg-[#48896E] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <BoxTitle title="Аутсорсинг внешнеэкономической деятельности" />
         <BoxSubTitle>
           <span>
             Берём на себя все этапы и риски внешнеэкономической деятельности,
-            <br /> чтобы вы могли сосредоточиться на развитии бизнеса.
+            <br className="hidden md:flex" /> чтобы вы могли сосредоточиться
+            на развитии бизнеса.
           </span>
         </BoxSubTitle>
-        <div className="flex w-full gap-6 pb-[2rem]">
+        <div className="flex w-full flex-col gap-2 pb-4 md:flex-row md:gap-6 md:pb-[2rem]">
           {[
             {
               icon: iconCompare.src,
@@ -108,7 +109,7 @@ export default function Home() {
             Мы не просто оказываем услуги — мы защищаем ваш бизнес от рисков.
           </span>
         </BoxSubTitle>
-        <div className="grid select-none grid-cols-2 gap-x-6 gap-y-6 pb-6">
+        <div className="grid select-none gap-y-2 pb-4 md:grid-cols-2 md:gap-x-6 md:gap-y-6 md:pb-6">
           {[
             {
               icon: iconInsurance,
@@ -137,7 +138,7 @@ export default function Home() {
           ].map((reason, index) => (
             <li
               key={index}
-              className="flex flex-col items-center rounded-2xl bg-white p-6 text-center text-xl text-[#1B1B1B] shadow-md"
+              className="flex flex-col items-center rounded-2xl bg-white p-4 text-center text-xs text-[#1B1B1B] shadow-md md:p-6 md:text-xl"
             >
               <Image
                 src={reason.icon}
@@ -145,8 +146,8 @@ export default function Home() {
                 width={48}
                 height={48}
               />
-              <h3 className="pt-4 font-semibold">{reason.title}</h3>
-              <p className="pt-2">{reason.text}</p>
+              <h3 className="pt-2 font-semibold md:pt-4">{reason.title}</h3>
+              <p className="pt-1 md:pt-2">{reason.text}</p>
             </li>
           ))}
         </div>
@@ -159,13 +160,13 @@ export default function Home() {
 
       {/* <Reviews /> */}
 
-      <Section className="bg-[#48896E] px-10 shadow-2xl shadow-[#2D2D5840]">
-        <div className="flex flex-1 gap-6">
-          <div className="relative flex flex-1">
+      <Section className="bg-[#48896E] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
+        <div className="flex flex-1 flex-col gap-6 md:flex-row">
+          <div className="relative flex h-[236px] md:h-auto md:flex-1">
             <Image
               src={imageChart3D}
               alt="3D график"
-              className="rounded-3xl"
+              className="rounded-3xl object-cover"
               fill
             />
           </div>
@@ -176,7 +177,7 @@ export default function Home() {
                 Неправильное оформление ВЭД может стоить вам миллионов рублей.
               </span>
             </BoxSubTitle>
-            <p className="pb-4 text-2xl">Мы исключаем</p>
+            <p className="pb-2 text-base md:pb-4 md:text-2xl">Мы исключаем</p>
             <ul className="list-disc space-y-2 pl-5">
               {[
                 "Штрафы и доначисления из-за ошибок в декларировании",
@@ -184,52 +185,53 @@ export default function Home() {
                 "Финансовые потери из-за недобросовестных поставщиков",
                 "Уголовную ответственность за нарушение таможенного законодательства",
               ].map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="text-xs md:text-base">
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
         </div>
       </Section>
 
-      <div className="flex gap-2">
-        <div className="rounded-4xl flex flex-col gap-4 bg-[#587DBB] px-10 py-20">
+      <div className="flex flex-col gap-2 md:flex-row">
+        <div className="rounded-4xl flex flex-col gap-2 bg-[#587DBB] px-4 py-6 md:gap-4 md:px-10 md:py-20">
           <BoxTitle title="Наша команда" />
           <div className="flex flex-col gap-4 text-[#1B1B1B]">
             <div className="flex gap-4 rounded-2xl bg-white shadow-lg transition-all hover:scale-[102%]">
-              <div className="relative px-10 py-5 text-[2.5rem] before:absolute before:-inset-[2px] before:rounded-2xl before:border-2 before:border-[#587DBB]">
+              <div className="relative px-4 py-6 text-2xl before:absolute before:-inset-[2px] before:rounded-2xl before:border-2 before:border-[#587DBB] md:px-10 md:py-5 md:text-[2.5rem]">
                 10+
               </div>
-              <p className="flex flex-1 items-center justify-center text-xl">
+              <p className="flex flex-1 items-center justify-center text-xs md:text-xl">
                 лет в международной торговле
                 <br /> и таможенном декларировании
               </p>
             </div>
             <div className="flex justify-between gap-4">
-              <div className="rounded-2xl bg-white px-10 py-5 shadow-lg transition-all hover:scale-[102%]">
-                <p className="flex items-center justify-center text-xl">
+              <div className="rounded-2xl bg-white px-4 py-6 shadow-lg transition-all hover:scale-[102%] md:px-10 md:py-5">
+                <p className="flex items-center justify-center text-xs md:text-xl">
                   Таможенные брокеры
                 </p>
               </div>
-              <div className="rounded-2xl bg-white px-10 py-5 shadow-lg transition-all hover:scale-[102%]">
-                <p className="flex items-center justify-center text-xl">
+              <div className="rounded-2xl bg-white px-4 py-6 shadow-lg transition-all hover:scale-[102%] md:px-10 md:py-5">
+                <p className="flex items-center justify-center text-xs md:text-xl">
                   Юристы по ВЭД
                 </p>
               </div>
             </div>
-            <div className="rounded-2xl bg-white px-10 py-5 shadow-lg transition-all hover:scale-[102%]">
-              <p className="flex items-center justify-center text-xl">
+            <div className="rounded-2xl bg-white px-4 py-6 shadow-lg transition-all hover:scale-[102%] md:px-10 md:py-5">
+              <p className="flex items-center justify-center text-xs md:text-xl">
                 Специалисты по закупкам за рубежом
               </p>
             </div>
           </div>
         </div>
-        <div className="relative w-full flex-1">
+        <div className="relative h-[240px] md:h-auto md:flex-1">
           <Image
             src={handshakeImg}
             alt="Рукопожатие — сотрудничество"
-            className="rounded-4xl"
+            className="rounded-4xl object-cover"
             fill
-            objectFit="cover"
           />
         </div>
       </div>
@@ -237,7 +239,7 @@ export default function Home() {
       <Section>
         <BoxTitle title="Что входит в пакет услуг" />
         <div className="flex select-none flex-col gap-4">
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
             {[
               "Анализ рынка и поиск поставщиков",
               "Оптимизация налогов и пошлин",
@@ -245,20 +247,20 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative w-fit rounded-2xl border-2 border-[#EFEFEF] px-8 py-6 text-xl shadow-lg transition-all hover:scale-[102%]"
+                className="relative w-full rounded-2xl border-2 border-[#EFEFEF] px-8 py-6 text-center text-xl shadow-lg transition-all hover:scale-[102%] md:w-fit"
               >
                 {item}
               </div>
             ))}
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
             {[
               "Юридическое сопровождение",
               "Таможенное оформление контрагентов",
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative w-fit px-8 py-6 text-xl shadow-lg transition-all before:absolute before:-inset-[2px] before:rounded-2xl before:border-2 before:border-[#EFEFEF] hover:scale-[102%]"
+                className="relative w-full px-8 py-6 text-xl shadow-lg transition-all before:absolute before:-inset-[2px] before:rounded-2xl before:border-2 before:border-[#EFEFEF] hover:scale-[102%] md:w-fit"
               >
                 {item}
               </div>
@@ -267,9 +269,9 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-[#48896E] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="bg-[#48896E] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <BoxTitle title="FAQ" />
-        <div className="flex gap-6">
+        <div className="flex flex-col gap-6 md:flex-row">
           <div className="flex flex-1">
             <Accordion
               question={[
@@ -289,7 +291,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className="relative flex flex-1">
+          <div className="relative flex h-[200px] md:flex-1">
             <Image
               src="/faqImg.jpg"
               alt="Работа за ноутбуком"
@@ -371,7 +373,7 @@ export default function Home() {
           <h2 className="text-shadow-lg pb-8 text-center text-[2rem] font-bold text-[#EFEFEF]">
             Оставьте заявку — и мы подберём для вас лучшее решение!
           </h2>
-          <div className="px-[296px]">
+          <div className="md:px-[18.5rem]">
             <FeedbackForm />
           </div>
         </div>

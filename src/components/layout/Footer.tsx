@@ -6,14 +6,14 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="items-top col-span-12 flex select-none justify-between gap-48 rounded-3xl bg-[#48896E] px-10 py-20">
+    <footer className="items-top col-span-12 select-none justify-between gap-48 rounded-3xl bg-[#48896E] md:flex md:px-10 md:py-20">
       <Link href="/">
         <Image src={mainLogo} alt="Логотип" width={117} height={40} />
       </Link>
 
       <nav>
-        <ul className="flex gap-6 text-xl">
-          <li className="flex min-w-[17.5rem] flex-col gap-4">
+        <ul className="gap-6 text-xl md:flex">
+          <li className="flex flex-col gap-4 md:min-w-[17.5rem]">
             <span className="pb-2 font-semibold">Меню сайта</span>
             <Link href="/customs-clearance" className="hover:text-gray-200">
               Таможенное оформление

@@ -20,10 +20,10 @@ const Accordion = ({
       {question.map((item, index) => (
         <div
           key={index}
-          className="cursor-pointer overflow-hidden rounded-xl border bg-white px-8 py-9 shadow"
+          className="cursor-pointer overflow-hidden rounded-xl border bg-white px-4 py-5 shadow md:px-8 md:py-9"
           onClick={() => toggle(index)}
         >
-          <button className="flex w-full cursor-pointer justify-between text-left text-xl font-bold text-black transition">
+          <button className="flex w-full cursor-pointer items-center justify-between text-left text-xs font-bold text-black transition md:text-xl">
             {item.question}
             <AnimatePresence mode="wait">
               {activeIndex === index ? (
@@ -35,7 +35,7 @@ const Accordion = ({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.2 }}
-                  className="h-8 w-8"
+                  className="h-6 w-6 md:h-8 md:w-8"
                 />
               ) : (
                 <motion.img
@@ -46,7 +46,7 @@ const Accordion = ({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.2 }}
-                  className="h-8 w-8"
+                  className="h-6 w-6 md:h-8 md:w-8"
                 />
               )}
             </AnimatePresence>
@@ -66,7 +66,9 @@ const Accordion = ({
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden bg-white"
               >
-                <div className="pt-4 text-xl text-gray-600">{item.answer}</div>
+                <div className="pt-4 text-xs text-gray-600 md:text-xl">
+                  {item.answer}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

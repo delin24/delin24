@@ -10,7 +10,9 @@ export const Section: React.FC<SectionProps> = ({
   className = "",
 }) => {
   return (
-    <section className={`w-full rounded-[1.75rem] py-[5rem] ${className}`}>
+    <section
+      className={`w-full rounded-[1.75rem] py-6 md:py-[5rem] ${className}`}
+    >
       {children}
     </section>
   );

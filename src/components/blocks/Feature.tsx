@@ -11,9 +11,12 @@ export interface FeatureProps {
 
 export const Feature: React.FC<FeatureProps> = ({ feature }) => {
   return (
-    <div className="flex flex-1 select-none flex-col items-center gap-4 rounded-[1.75rem] bg-white p-8 shadow-lg">
-      <Image src={feature.icon} alt={feature.alt} width={138} height={138} />
-      <p className="text-center text-xl font-normal text-[#1B1B1B]">
+    <div className="flex flex-1 select-none flex-col items-center gap-4 rounded-[1.75rem] bg-white p-4 shadow-lg md:p-8">
+      <div className="relative h-14 w-14 md:h-[8.625rem] md:w-[8.625rem]">
+        <Image src={feature.icon} alt={feature.alt} fill sizes="auto" />
+      </div>
+
+      <p className="text-center text-xs font-normal text-[#1B1B1B] md:text-xl">
         {feature.text}
       </p>
     </div>

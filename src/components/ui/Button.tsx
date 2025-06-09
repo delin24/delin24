@@ -19,7 +19,7 @@ const Button = ({
   return (
     <button
       disabled={disabled}
-      className={`${className} flex w-fit gap-4 rounded-2xl px-24 py-6 text-xl font-semibold text-white shadow-lg transition-all duration-200 ease-in-out ${icon ? "border-2 border-[#F7783D]" : "bg-[#F7783D]"} ${disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer hover:bg-[#EF7035] active:scale-95"} `}
+      className={`${className} flex w-fit items-center gap-4 rounded-2xl px-11 py-4 text-xs font-semibold text-white shadow-lg transition-all duration-200 ease-in-out md:px-24 md:py-6 md:text-xl ${icon ? "border-2 border-[#F7783D]" : "bg-[#F7783D]"} ${disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer hover:bg-[#EF7035] active:scale-95"} `}
       onClick={onClick}
     >
       {text}

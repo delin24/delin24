@@ -10,7 +10,7 @@ const BoxTitle: React.FC<SectionTitleProps> = ({
 }) => {
   return (
     <h2
-      className={`text-shadow-lg select-none pb-[2rem] text-3xl text-[2rem] font-bold ${className}`}
+      className={`text-shadow-lg select-none pb-4 text-lg font-bold md:pb-[2rem] md:text-[2rem] ${className}`}
     >
       {title}
     </h2>

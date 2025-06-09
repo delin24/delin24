@@ -6,12 +6,12 @@ import iconCall from "@public/icons/iconCall.png";
 
 const Header = () => {
   return (
-    <header className="flex select-none items-center justify-between rounded-3xl bg-[#48896E] px-10 py-6 shadow-2xl shadow-[#2D2D5840]">
+    <header className="select-none items-center justify-between rounded-3xl bg-[#48896E] shadow-2xl shadow-[#2D2D5840] md:flex md:px-10 md:py-6">
       <Link href="/">
         <Image src={mainLogo} alt="Логотип" width={117} height={40} />
       </Link>
 
-      <nav className="flex gap-20 text-xl font-normal">
+      <nav className="gap-20 text-xl font-normal md:flex">
         <Link href="/customs-clearance" className="hover:text-gray-200">
           Таможенное оформление
         </Link>

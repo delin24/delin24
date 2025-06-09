@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={` ${inter.className} flex justify-center`}>
       <body>
-        <div className="flex w-[90rem] flex-col justify-center gap-2 px-16 py-2">
+        <div className="flex flex-col justify-center gap-2 px-4 py-2 md:w-[90rem] md:px-16">
           <YandexMetrika
             id={Number(process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID)}
           />
