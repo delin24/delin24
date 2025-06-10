@@ -31,7 +31,7 @@ const Header = () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         timeoutRef.current = setTimeout(() => {
           setIsVisible(true);
-        }, 125);
+        }, 0);
       }
 
       lastScrollY.current = currentY;
