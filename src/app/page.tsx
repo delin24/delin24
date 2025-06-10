@@ -247,7 +247,7 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative w-full rounded-2xl border-2 border-[#EFEFEF] px-8 py-6 text-center text-xl shadow-lg transition-all hover:scale-[102%] md:w-fit"
+                className="relative w-full rounded-2xl border-2 border-[#EFEFEF] px-8 py-6 text-center text-xs shadow-lg transition-all hover:scale-[102%] md:w-fit md:text-xl"
               >
                 {item}
               </div>
@@ -260,7 +260,7 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative w-full px-8 py-6 text-xl shadow-lg transition-all before:absolute before:-inset-[2px] before:rounded-2xl before:border-2 before:border-[#EFEFEF] hover:scale-[102%] md:w-fit"
+                className="relative w-full px-8 py-6 text-center text-xs shadow-lg transition-all before:absolute before:-inset-[2px] before:rounded-2xl before:border-2 before:border-[#EFEFEF] hover:scale-[102%] md:w-fit md:text-xl"
               >
                 {item}
               </div>
@@ -305,7 +305,7 @@ export default function Home() {
 
       <Section className="select-none bg-[#587DBB] px-10 shadow-2xl shadow-[#2D2D5840]">
         <div className="flex gap-6">
-          <div className="flex flex-1">
+          <div className="hidden flex-1 md:flex">
             <div className="flex h-full w-full flex-col gap-2">
               <div className="relative flex-1">
                 <Image
@@ -342,7 +342,7 @@ export default function Home() {
             <div className="flex flex-col">
               <BoxTitle title="Delin — профессиональные услуги ВЭД в Красноярске" />
               <BoxSubTitle className="w-full">
-                <span className="pb-6 text-xl">
+                <span className="pb-4 text-xs md:pb-6 md:text-xl">
                   Компания Delin оказывает полный комплекс услуг
                   по сопровождению внешнеэкономической деятельности: аутсорсинг
                   ВЭД под ключ, таможенное декларирование, поиск поставщиков
@@ -353,14 +353,14 @@ export default function Home() {
                   на международную торговлю.
                 </span>
               </BoxSubTitle>
-              <h3 className="pb-8 text-[1.625rem] font-semibold">
+              <h3 className="pb-2 text-base font-semibold md:pb-8 md:text-[1.625rem]">
                 Наши услуги ВЭД включают
               </h3>
-              <ul className="list-disc pb-8 pl-7 text-xl">
+              <ul className="list-disc pb-4 pl-4 text-xs md:pb-8 md:pl-7 md:text-xl">
                 <li>Таможенные услуги ВЭД</li>
                 <li>Аутсорсинг ВЭД для бизнеса</li>
               </ul>
-              <p className="text-xl">
+              <p className="text-xs md:text-xl">
                 Доверьте ведение ВЭД профессионалам — экономьте время и деньги!
               </p>
             </div>

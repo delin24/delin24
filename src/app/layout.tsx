@@ -10,16 +10,13 @@ import BoxTitle from "@/components/blocks/BoxTitle";
 import { Toaster } from "react-hot-toast";
 import Policy from "@/components/blocks/Policy";
 import { YandexMetrika } from "@/components/YandexMetrika";
+import { useMobileMenuStore } from "@/stores/useMobileMenuStore";
+import MobileMenu from "@/components/layout/MobileMenu";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
-
-// export const metadata: Metadata = {
-//   title: "Delin 24",
-//   description: "Аутсорсинг ВЭД под ключ",
-// };
 
 export default function RootLayout({
   children,
@@ -27,6 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const { type, close } = useModalStore();
+  const { isOpen: isMenuOpen, close: closeMenu } = useMobileMenuStore();
+
   const isOpen = type !== "none";
   return (
     <html lang="en" className={` ${inter.className} flex justify-center`}>
@@ -48,6 +47,7 @@ export default function RootLayout({
 
             {type === "policy" && <Policy />}
           </Modal>
+          <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
           <Footer />
         </div>
       </body>
