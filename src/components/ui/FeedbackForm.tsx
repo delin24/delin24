@@ -13,13 +13,8 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
     email: "",
     message: "",
   });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isAgreed, setIsAgreed] = useState(false);
-
-  const isDisabled =
-    !isAgreed ||
-    !formData.name.trim() ||
-    !formData.phone.trim() ||
-    !formData.email.trim();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -29,6 +24,11 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!isAgreed) {
+      alert("Пожалуйста, согласитесь с политикой конфиденциальности.");
+      return;
+    }
 
     try {
       const response = await fetch("/api/send-email", {
@@ -68,18 +68,17 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
 
   return (
     <form
-      className={`flex flex-col gap-6 ${className} `}
+      className={`flex flex-col gap-2 md:gap-6 ${className} `}
       onSubmit={handleSubmit}
     >
-      <div className="flex gap-4">
+      <div className="flex flex-col gap-2 md:flex-row md:gap-4">
         <input
           name="name"
           value={formData.name}
           onChange={handleChange}
           type="text"
           placeholder="Имя"
-          className="w-full rounded-xl border-2 border-[#F7986C] px-4 py-4 focus:outline-none"
-          required
+          className="w-full rounded-xl border-2 border-[#F7986C] px-4 py-4 placeholder:text-xs focus:outline-none md:placeholder:text-[1.25rem]"
         />
         <input
           name="phone"
@@ -87,8 +86,10 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
           onChange={handleChange}
           type="phone"
           placeholder="Телефон"
-          className="w-full rounded-xl border-2 border-[#F7986C] px-4 py-4 focus:outline-none"
+          className="w-full rounded-xl border-2 border-[#F7986C] px-4 py-4 placeholder:text-xs focus:outline-none md:placeholder:text-[1.25rem]"
+          title="Пожалуйста, введите номер телефона"
           required
+          minLength={9}
         />
       </div>
       <input
@@ -97,7 +98,8 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
         onChange={handleChange}
         type="email"
         placeholder="Эл. адрес"
-        className="rounded-xl border-2 border-[#F7986C] px-4 py-4 focus:outline-none"
+        className="rounded-xl border-2 border-[#F7986C] px-4 py-4 placeholder:text-xs focus:outline-none md:placeholder:text-[1.25rem]"
+        title="Укажите корректный email"
         required
       />
       <input
@@ -106,21 +108,22 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
         onChange={handleChange}
         type="text"
         placeholder="Комментарий"
-        className="rounded-xl border-2 border-[#F7986C] px-4 py-4 focus:outline-none"
+        className="rounded-xl border-2 border-[#F7986C] px-4 py-4 placeholder:text-xs focus:outline-none md:placeholder:text-[1.25rem]"
       />
-      <label className="inline-flex cursor-pointer select-none items-center gap-4 pb-4">
+      <label className="relative inline-flex cursor-pointer items-center gap-4 pb-4">
         <input
           type="checkbox"
-          className="peer hidden"
+          required
           onChange={(e) => setIsAgreed(e.target.checked)}
+          className="peer absolute h-full w-full cursor-pointer opacity-0"
         />
-        <span className="h-[2rem] w-[2rem] rounded-lg border-2 border-[#F7986C] transition peer-checked:bg-[#F7986C]" />
-        <span className="text-[1.25rem] font-normal">
-          Я ознакомлен и согласен с{" "}
+        <span className="h-[20px] w-[20px] rounded-lg border-2 border-[#F7986C] transition-all peer-checked:bg-[#F7986C] md:h-[2rem] md:w-[2rem]" />
+        <span className="text-[10px] font-normal md:text-[1.25rem]">
+          Я ознакомлен и согласен с&nbsp;
           <button
             type="button"
             onClick={() => open("policy")}
-            className="text-orange-600 underline hover:text-orange-500"
+            className="underline hover:text-orange-500"
           >
             политикой конфиденциальности
           </button>
@@ -128,7 +131,7 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
       </label>
 
       <div className="flex justify-center">
-        <Button text="Отправить" disabled={isDisabled} />
+        <Button text="Отправить" disabled={false} />
       </div>
     </form>
   );

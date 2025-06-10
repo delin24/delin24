@@ -5,6 +5,7 @@ import mainLogo from "@public/mainLogo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useMobileMenuStore } from "@/stores/useMobileMenuStore";
+import iconCall from "@public/icons/iconCall.png";
 
 const Header = () => {
   const { open: openMenu } = useMobileMenuStore();
@@ -67,10 +68,25 @@ const Header = () => {
 
         <nav className="hidden items-center gap-20 text-xl font-normal md:flex">
           <Link href="/customs-clearance" className="hover:text-gray-200">
-            Таможенное оформление
+            Таможенное&nbsp;оформление
           </Link>
           <Link href="/sourcing" className="hover:text-gray-200">
-            Поиск поставщиков
+            Поиск&nbsp;поставщиков
+          </Link>
+
+          <Link href="tel:+73912051811" className="">
+            <div className="flex items-center gap-1">
+              <div className="relative h-6 w-6 flex-1">
+                <Image
+                  src={iconCall}
+                  alt=""
+                  fill
+                  sizes="auto"
+                  className="object-cover"
+                />
+              </div>
+              <p className="flex-1">+7&nbsp;931&nbsp;205&nbsp;18&nbsp;11</p>
+            </div>
           </Link>
         </nav>
       </div>

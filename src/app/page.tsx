@@ -291,7 +291,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className="relative flex h-[200px] md:flex-1">
+          <div className="relative flex min-h-[200px] md:flex-1">
             <Image
               src="/faqImg.jpg"
               alt="Работа за ноутбуком"
@@ -303,7 +303,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="select-none bg-[#587DBB] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="select-none bg-[#587DBB] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <div className="flex gap-6">
           <div className="hidden flex-1 md:flex">
             <div className="flex h-full w-full flex-col gap-2">
@@ -368,9 +368,9 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="select-none bg-[#587DBB] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="select-none bg-[#587DBB] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <div className="flex flex-col">
-          <h2 className="text-shadow-lg pb-8 text-center text-[2rem] font-bold text-[#EFEFEF]">
+          <h2 className="text-shadow-lg pb-4 text-center text-lg font-bold text-[#EFEFEF] md:pb-8 md:text-[2rem]">
             Оставьте заявку — и мы подберём для вас лучшее решение!
           </h2>
           <div className="md:px-[18.5rem]">
