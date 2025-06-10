@@ -166,7 +166,7 @@ export default function Home() {
             <Image
               src={imageChart3D}
               alt="3D график"
-              className="rounded-3xl object-cover"
+              className="rounded-2xl object-cover"
               fill
             />
           </div>
@@ -230,7 +230,7 @@ export default function Home() {
           <Image
             src={handshakeImg}
             alt="Рукопожатие — сотрудничество"
-            className="rounded-4xl object-cover"
+            className="rounded-2xl object-cover"
             fill
           />
         </div>
@@ -297,7 +297,7 @@ export default function Home() {
               alt="Работа за ноутбуком"
               fill
               priority
-              className="rounded-3xl object-cover"
+              className="rounded-2xl object-cover"
             />
           </div>
         </div>

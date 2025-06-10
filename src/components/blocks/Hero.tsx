@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({
   const { open } = useModalStore();
   return (
     <section
-      className={`rounded-4xl relative h-[334px] overflow-hidden shadow-2xl shadow-[#2D2D5840] md:h-[47.125rem] ${className ?? ""}`}
+      className={`relative h-[334px] overflow-hidden rounded-2xl shadow-2xl shadow-[#2D2D5840] md:h-[47.125rem] ${className ?? ""}`}
     >
       <div className="flex w-full flex-col gap-4 px-4 py-6 md:gap-6 md:px-10 md:py-20">
         <h1 className="text-[22px] font-bold md:w-2/3 md:text-5xl">{title}</h1>

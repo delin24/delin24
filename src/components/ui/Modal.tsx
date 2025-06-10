@@ -48,7 +48,7 @@ export default function Modal({ children, isOpen, onClose }: ModalProps) {
       onClick={onClose}
     >
       <div
-        className={`relative rounded-xl bg-white p-10 shadow-xl`}
+        className={`relative rounded-xl bg-white p-4 shadow-xl md:p-10`}
         onClick={(e) => e.stopPropagation()}
       >
         {children}

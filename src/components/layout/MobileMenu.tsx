@@ -54,7 +54,7 @@ const MobileMenu = ({
             </button>
 
             <Link href="/" onClick={onClose} className="hover:underline">
-              <BoxTitle title=" Главная " />
+              <BoxTitle title="Аутсорсинг ВЭД под ключ" />
             </Link>
             <Link
               href="/customs-clearance"

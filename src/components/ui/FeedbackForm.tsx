@@ -84,12 +84,13 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          type="phone"
+          type="tel"
           placeholder="Телефон"
           className="w-full rounded-xl border-2 border-[#F7986C] px-4 py-4 placeholder:text-xs focus:outline-none md:placeholder:text-[1.25rem]"
           title="Пожалуйста, введите номер телефона"
           required
-          minLength={9}
+          pattern="[0-9]{9,}" // только цифры, минимум 9
+          inputMode="numeric" // открывает цифровую клавиатуру на мобилках
         />
       </div>
       <input
@@ -118,7 +119,7 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
           className="peer absolute h-full w-full cursor-pointer opacity-0"
         />
         <span className="h-[20px] w-[20px] rounded-lg border-2 border-[#F7986C] transition-all peer-checked:bg-[#F7986C] md:h-[2rem] md:w-[2rem]" />
-        <span className="text-[10px] font-normal md:text-[1.25rem]">
+        <span className="text-[10px] font-normal md:text-[1rem]">
           Я ознакомлен и согласен с&nbsp;
           <button
             type="button"

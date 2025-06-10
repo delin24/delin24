@@ -47,10 +47,10 @@ export default function CustomsClearancePage() {
         className="text-[#000000]"
       />
 
-      <Section>
+      <Section className="pb-0">
         <BoxTitle title="Оформим. Сдадим. Выпустим." />
-        <div className="flex gap-6">
-          <div className="flex flex-1 flex-col gap-6">
+        <div className="flex flex-col gap-2 md:flex-row md:gap-6">
+          <div className="flex flex-1 gap-2 md:flex-col md:gap-6">
             {[
               {
                 icon: iconChevronDown.src,
@@ -66,7 +66,7 @@ export default function CustomsClearancePage() {
               <Feature feature={feature} key={index} />
             ))}
           </div>
-          <div className="relative flex flex-1">
+          <div className="relative flex min-h-[15.125rem] flex-1">
             <Image
               src="/clearanceFeaturesImg.jpg"
               alt=""
@@ -75,7 +75,7 @@ export default function CustomsClearancePage() {
             />
           </div>
           <div className="flex flex-1">
-            <div className="flex flex-1 flex-col gap-6">
+            <div className="flex flex-1 gap-2 md:flex-col md:gap-6">
               {[
                 {
                   icon: iconHourglass.src,
@@ -95,39 +95,41 @@ export default function CustomsClearancePage() {
         </div>
       </Section>
 
-      <Section className="bg-[#48896E] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="bg-[#48896E] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <BoxTitle title="Виды таможенного декларирования" />
         <BoxSubTitle>
           <span>
             Работаем с любыми категориями — от оборудования до медикаментов
           </span>
         </BoxSubTitle>
-        <ul className="mb-[2rem] rounded-3xl bg-[#F1F1F1] text-xl text-[#1B1B1B] shadow-lg shadow-[#2D2D5840]">
-          <li className="flex w-full justify-between rounded-3xl border-2 border-[#F1F1F1] bg-[#97AED4] py-[2rem]">
-            <p className="w-1/3 px-[2rem]">Категория</p>
-            <p className="w-1/3 px-[2rem]">Примеры</p>
-            <p className="w-1/3 px-[2rem]">Срок</p>
+        <ul className="mb-4 rounded-2xl bg-[#F1F1F1] text-xs text-[#1B1B1B] shadow-lg shadow-[#2D2D5840] md:mb-[2rem] md:text-xl">
+          <li className="flex w-full justify-between rounded-2xl border-2 border-[#F1F1F1] bg-[#97AED4] py-4 font-bold md:py-[2rem]">
+            <p className="w-1/3 px-4 md:px-[2rem]">Категория</p>
+            <p className="w-1/3 px-4 md:px-[2rem]">Примеры</p>
+            <p className="w-1/3 px-4 md:px-[2rem]">Срок</p>
           </li>
-          <li className="flex w-full justify-between py-[2rem]">
-            <p className="w-1/3 px-[2rem]">Промышленные товары</p>
-            <p className="w-1/3 px-[2rem]">Станки, электроника</p>
-            <p className="w-1/3 px-[2rem]">1–2 дня</p>
+          <li className="flex w-full justify-between py-4 md:py-[2rem]">
+            <p className="w-1/3 px-4 md:px-[2rem]">Промышленные товары</p>
+            <p className="md:x-[2rem] w-1/3 px-4">Станки, электроника</p>
+            <p className="w-1/3 px-4 md:px-[2rem]">1–2 дня</p>
           </li>
-          <li className="flex w-full justify-between py-[2rem]">
-            <p className="w-1/3 px-[2rem]">Продукция питания</p>
-            <p className="w-1/3 px-[2rem]">Кондитерские изделия, кофе</p>
-            <p className="w-1/3 px-[2rem]">1 день</p>
+          <li className="flex w-full justify-between py-4 md:py-[2rem]">
+            <p className="w-1/3 px-4 md:px-[2rem]">Продукция питания</p>
+            <p className="w-1/3 px-4 md:px-[2rem]">
+              Кондитерские изделия, кофе
+            </p>
+            <p className="w-1/3 px-4 md:px-[2rem]">1 день</p>
           </li>
-          <li className="flex w-full justify-between py-[2rem]">
-            <p className="w-1/3 px-[2rem]">Спецгрузы</p>
-            <p className="w-1/3 px-[2rem]">Медикаменты</p>
-            <p className="w-1/3 px-[2rem]">2–3 дня</p>
+          <li className="flex w-full justify-between py-4 md:py-[2rem]">
+            <p className="w-1/3 px-4 md:px-[2rem]">Спецгрузы</p>
+            <p className="w-1/3 px-4 md:px-[2rem]">Медикаменты</p>
+            <p className="w-1/3 px-4 md:px-[2rem]">2–3 дня</p>
           </li>
         </ul>
-        <h3 className="text-shadow-lg select-none pb-8 text-[1.625rem] font-semibold">
+        <h3 className="text-shadow-lg select-none pb-4 text-[1.625rem] font-semibold md:pb-8">
           География
         </h3>
-        <div className="relative min-h-[38.25rem]">
+        <div className="relative min-h-[222px] md:min-h-[38.25rem]">
           <Image
             src="/map.png"
             alt="map"
@@ -138,12 +140,12 @@ export default function CustomsClearancePage() {
         </div>
       </Section>
 
-      <Section className="bg-[#587DBB] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="bg-[#587DBB] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <BoxTitle title="Преимущества" />
         <BoxSubTitle>
           <span>Почему 250+ компаний доверяют нам таможенное оформление</span>
         </BoxSubTitle>
-        <div className="flex gap-6">
+        <div className="flex flex-col gap-2 md:flex-row md:gap-6">
           {[
             {
               icon: fileTray.src,
@@ -167,17 +169,17 @@ export default function CustomsClearancePage() {
       </Section>
 
       <Section>
-        <div className="flex select-none gap-6">
-          <div className="relative flex flex-1">
+        <div className="flex select-none flex-col gap-4 md:flex-row md:gap-6">
+          <div className="relative flex min-h-[222px] flex-1">
             <Image
               src={risksImg.src}
               alt="risksImg"
               sizes="auto"
               fill
-              className="rounded-3xl object-cover"
+              className="rounded-2xl object-cover"
             />
           </div>
-          <div className="flex-1 py-20">
+          <div className="flex-1 md:py-20">
             <BoxTitle title="Риски" />
             <BoxSubTitle>
               <span>Что теряют компании без профессионалов</span>
@@ -188,7 +190,7 @@ export default function CustomsClearancePage() {
                 "Простой груза на СВХ — 15 000 ₽/день за хранение",
                 "Штрафы за нарушение таможенных правил",
               ].map((item, index) => (
-                <li className="text-xl" key={index}>
+                <li className="text-xs md:text-xl" key={index}>
                   {item}
                 </li>
               ))}
@@ -197,13 +199,13 @@ export default function CustomsClearancePage() {
         </div>
       </Section>
 
-      <Section className="select-none bg-[#587DBB] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="select-none bg-[#587DBB] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <BoxTitle title="Этапы работы" />
         <BoxSubTitle>
           <span>Как мы оформляем ваш груз</span>
         </BoxSubTitle>
-        <div className="flex gap-6">
-          <div className="flex flex-1 flex-col gap-6">
+        <div className="flex flex-col gap-2 md:flex-row md:gap-6">
+          <div className="flex flex-1 gap-2 md:flex-col md:gap-6">
             {[
               {
                 icon: iconStats.src,
@@ -218,7 +220,7 @@ export default function CustomsClearancePage() {
             ].map((reason, index) => (
               <li
                 key={index}
-                className="flex flex-col items-center rounded-2xl bg-white p-6 text-center text-xl text-[#1B1B1B] shadow-md"
+                className="flex flex-col items-center rounded-2xl bg-white p-4 text-center text-xs text-[#1B1B1B] shadow-md md:p-6 md:text-xl"
               >
                 <Image
                   src={reason.icon}
@@ -230,7 +232,7 @@ export default function CustomsClearancePage() {
               </li>
             ))}
           </div>
-          <div className="flex flex-1 flex-col gap-6">
+          <div className="flex flex-1 gap-2 md:flex-col md:gap-6">
             {[
               {
                 icon: iconCalc.src,
@@ -245,7 +247,7 @@ export default function CustomsClearancePage() {
             ].map((reason, index) => (
               <li
                 key={index}
-                className="flex flex-col items-center rounded-2xl bg-white p-6 text-center text-xl text-[#1B1B1B] shadow-md"
+                className="flex flex-1 flex-col items-center rounded-2xl bg-white p-4 text-center text-xs text-[#1B1B1B] shadow-md md:p-6 md:text-xl"
               >
                 <Image
                   src={reason.icon}
@@ -257,7 +259,7 @@ export default function CustomsClearancePage() {
               </li>
             ))}
           </div>
-          <div className="relative w-full flex-1">
+          <div className="relative min-h-[214px] w-full flex-1">
             <Image
               src={stepsImg.src}
               alt=""
@@ -270,11 +272,11 @@ export default function CustomsClearancePage() {
       </Section>
 
       <Section className="relative select-none overflow-hidden bg-[rgba(72,137,110,0.6)]">
-        <h2 className="text-shadow-lg pb-8 text-center text-[2rem] font-bold text-[#EFEFEF]">
+        <h2 className="text-shadow-lg mx-4 pb-8 text-center text-lg font-bold text-[#EFEFEF] md:text-[2rem]">
           Получите бесплатный расчёт таможенных платежей!
         </h2>
 
-        <FeedbackForm className="mx-[19.375rem] rounded-2xl bg-amber-50 p-[2rem] text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840]" />
+        <FeedbackForm className="mx-4 rounded-2xl bg-amber-50 p-4 text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840] md:mx-[19.375rem] md:p-[2rem]" />
         <Image
           src={clearanceImg.src}
           alt="risksImg"
@@ -291,7 +293,7 @@ export default function CustomsClearancePage() {
             Наша миссия — сделать таможенное оформление прозрачным и безопасным
           </span>
         </BoxSubTitle>
-        <div className="flex gap-6">
+        <div className="flex flex-col gap-4 md:flex-row md:gap-6">
           {[
             { value: "12 лет", text: "на рынке ВЭД" },
             { value: "50+", text: "специалистов в штате (юристы, декларанты)" },
@@ -302,20 +304,20 @@ export default function CustomsClearancePage() {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex-1 rounded-2xl bg-[#F1F1F1] p-[2rem]"
+              className="flex-1 rounded-2xl bg-[#F1F1F1] p-4 md:p-[2rem]"
             >
-              <span className="pb-4 text-[2.5rem] text-[#587DBB]">
+              <span className="pb-4 text-2xl text-[#587DBB] md:text-[2.5rem]">
                 {item.value}
               </span>
-              <p className="text-xl text-[#1B1B1B]">{item.text}</p>
+              <p className="text-xs text-[#1B1B1B] md:text-xl">{item.text}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      <Section className="bg-[#48896E] px-10 shadow-2xl shadow-[#2D2D5840]">
+      <Section className="bg-[#48896E] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
         <BoxTitle title="FAQ" />
-        <div className="flex gap-6">
+        <div className="flex flex-col gap-6 md:flex-row">
           <div className="flex flex-1">
             <Accordion
               question={[
@@ -334,7 +336,7 @@ export default function CustomsClearancePage() {
               ]}
             />
           </div>
-          <div className="relative flex flex-1">
+          <div className="relative flex min-h-[220px] flex-1">
             <Image
               src="/faq2Img.jpg"
               alt="Работа за ноутбуком"
@@ -346,11 +348,11 @@ export default function CustomsClearancePage() {
         </div>
       </Section>
 
-      <Section className="select-none bg-[#587DBB] px-10 shadow-2xl shadow-[#2D2D5840]">
-        <div className="flex gap-6">
-          <div className="flex flex-1 gap-6">
-            <div className="flex flex-1 flex-col gap-6">
-              <div className="relative flex-1 overflow-hidden rounded-2xl">
+      <Section className="select-none bg-[#587DBB] px-4 shadow-2xl shadow-[#2D2D5840] md:px-10">
+        <div className="flex flex-col gap-6 md:flex-row">
+          <div className="flex flex-1 flex-col gap-2 md:gap-6">
+            <div className="flex flex-1 flex-col gap-2 md:gap-6">
+              <div className="relative min-h-[168px] flex-1 overflow-hidden rounded-2xl">
                 <Image
                   src={about4.src}
                   alt=""
@@ -359,7 +361,7 @@ export default function CustomsClearancePage() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative flex-1 overflow-hidden rounded-2xl">
+              <div className="relative min-h-[168px] flex-1 overflow-hidden rounded-2xl">
                 <Image
                   src={about5.src}
                   alt=""
@@ -369,7 +371,7 @@ export default function CustomsClearancePage() {
                 />
               </div>
             </div>
-            <div className="relative flex-1 overflow-hidden rounded-2xl">
+            <div className="relative min-h-[168px] flex-1 overflow-hidden rounded-2xl">
               <Image
                 src={about6.src}
                 alt=""
@@ -383,7 +385,7 @@ export default function CustomsClearancePage() {
             <div className="flex flex-col">
               <BoxTitle title="Профессиональное таможенное декларирование в Красноярске и РФ" />
               <BoxSubTitle className="w-full">
-                <span className="pb-6 text-xl">
+                <span className="pb-6 text-xs md:text-xl">
                   Компания Delin оказывает услуги таможенного оформления
                   под ключ для юридических лиц и ИП. <br />
                   <br />
@@ -392,15 +394,15 @@ export default function CustomsClearancePage() {
                   позволяет минимизировать риски штрафов, задержек и переплат.
                 </span>
               </BoxSubTitle>
-              <h3 className="pb-8 text-[1.625rem] font-semibold">
+              <h3 className="pb-2 text-base font-semibold md:pb-8 md:text-[1.625rem]">
                 Ключевые услуги
               </h3>
-              <ul className="list-disc pb-8 pl-7 text-xl">
+              <ul className="list-disc pb-2 pl-7 text-xs md:pb-8 md:text-xl">
                 <li>Таможенное декларирование импорта и экспорта</li>
                 <li>Аутсорсинг ВЭД для бизнеса</li>{" "}
                 <li>Срочное оформление грузов</li>
               </ul>
-              <p className="pb-[2rem] text-xl">
+              <p className="pb-4 text-xs md:pb-[2rem] md:text-xl">
                 Работаем по всей России. Гарантируем соблюдение
                 законодательства!
               </p>
