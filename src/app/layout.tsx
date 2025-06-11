@@ -12,7 +12,6 @@ import Policy from "@/components/blocks/Policy";
 import { YandexMetrika } from "@/components/YandexMetrika";
 import { useMobileMenuStore } from "@/stores/useMobileMenuStore";
 import MobileMenu from "@/components/layout/MobileMenu";
-import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +31,6 @@ export default function RootLayout({
     <html lang="en" className={` ${inter.className} flex justify-center`}>
       <body>
         <div className="flex flex-col justify-center gap-2 px-4 py-2 md:w-[90rem] md:px-16">
-          <Analytics />
           <YandexMetrika
             id={Number(process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID)}
           />
