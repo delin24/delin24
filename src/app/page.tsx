@@ -195,7 +195,7 @@ export default function Home() {
       </Section>
 
       <div className="flex flex-col gap-2 md:flex-row">
-        <div className="rounded-4xl flex flex-col gap-2 bg-[#587DBB] px-4 py-6 md:gap-4 md:px-10 md:py-20">
+        <div className="flex flex-col gap-2 rounded-2xl bg-[#587DBB] px-4 py-6 md:gap-4 md:px-10 md:py-20">
           <BoxTitle title="Наша команда" />
           <div className="flex flex-col gap-4 text-[#1B1B1B]">
             <div className="flex gap-4 rounded-2xl bg-white shadow-lg transition-all hover:scale-[102%]">
@@ -312,7 +312,7 @@ export default function Home() {
                   src={About1}
                   alt="Главное изображение"
                   fill
-                  className="rounded-3xl object-cover"
+                  className="rounded-2xl object-cover"
                   priority
                 />
               </div>
@@ -322,7 +322,7 @@ export default function Home() {
                     src={About2}
                     alt="Главное изображение"
                     fill
-                    className="rounded-3xl object-cover"
+                    className="rounded-2xl object-cover"
                     priority
                   />
                 </div>
@@ -331,7 +331,7 @@ export default function Home() {
                     src={About3}
                     alt="Главное изображение"
                     fill
-                    className="rounded-3xl object-cover"
+                    className="rounded-2xl object-cover"
                     priority
                   />
                 </div>
