@@ -16,6 +16,7 @@ const Footer = () => {
             fill
             sizes="auto"
             objectFit="contain"
+            unoptimized
           />
         </Link>
       </div>
@@ -67,6 +68,7 @@ const Footer = () => {
                   fill
                   sizes="auto"
                   className="object-cover"
+                  unoptimized
                 />
               </div>
               <p className="select-text">+7 931 205 18 11</p>
@@ -79,6 +81,7 @@ const Footer = () => {
                   fill
                   sizes="auto"
                   className="object-cover"
+                  unoptimized
                 />
               </div>
               <p className="flex select-text items-center">import@delin24.ru</p>

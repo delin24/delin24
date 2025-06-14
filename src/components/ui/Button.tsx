@@ -23,7 +23,9 @@ const Button = ({
       onClick={onClick}
     >
       {text}
-      {icon && <Image src={icon} alt="arrowRight" width={24} height={24} />}
+      {icon && (
+        <Image src={icon} alt="arrowRight" width={24} height={24} unoptimized />
+      )}
     </button>
   );
 };

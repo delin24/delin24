@@ -72,6 +72,7 @@ export default function CustomsClearancePage() {
               alt=""
               fill
               className="rounded-3xl object-cover"
+              unoptimized
             />
           </div>
           <div className="flex flex-1">
@@ -136,6 +137,7 @@ export default function CustomsClearancePage() {
             sizes="auto"
             fill
             objectFit="contain"
+            unoptimized
           />
         </div>
       </Section>
@@ -177,6 +179,7 @@ export default function CustomsClearancePage() {
               sizes="auto"
               fill
               className="rounded-2xl object-cover"
+              unoptimized
             />
           </div>
           <div className="flex-1 md:py-20">
@@ -227,6 +230,7 @@ export default function CustomsClearancePage() {
                   alt={reason.alt}
                   width={48}
                   height={48}
+                  unoptimized
                 />
                 <p className="pt-2">{reason.text}</p>
               </li>
@@ -266,6 +270,7 @@ export default function CustomsClearancePage() {
               sizes="auto"
               fill
               className="rounded-2xl"
+              unoptimized
             />
           </div>
         </div>
@@ -283,6 +288,7 @@ export default function CustomsClearancePage() {
           sizes="auto"
           fill
           className="-z-10 object-cover"
+          unoptimized
         />
       </Section>
 
@@ -343,6 +349,7 @@ export default function CustomsClearancePage() {
               fill
               priority
               className="rounded-3xl object-cover"
+              unoptimized
             />
           </div>
         </div>
@@ -359,6 +366,7 @@ export default function CustomsClearancePage() {
                   sizes="auto"
                   fill
                   className="object-cover"
+                  unoptimized
                 />
               </div>
               <div className="relative min-h-[168px] flex-1 overflow-hidden rounded-2xl">
@@ -368,6 +376,7 @@ export default function CustomsClearancePage() {
                   sizes="auto"
                   fill
                   className="object-cover"
+                  unoptimized
                 />
               </div>
             </div>
@@ -378,6 +387,7 @@ export default function CustomsClearancePage() {
                 sizes="auto"
                 fill
                 className="object-cover"
+                unoptimized
               />
             </div>
           </div>
