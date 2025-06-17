@@ -1,11 +1,12 @@
 import {
   object,
   string,
-  email,
+  pipe,
   minLength,
   custom,
+  email,
   literal,
-  pipe,
+  InferOutput,
 } from "valibot";
 
 export const formSchema = object({
@@ -19,6 +20,9 @@ export const formSchema = object({
     ),
   ),
   email: pipe(string(), email("Введите корректный email")),
-  message: string(), // или: pipe(string(), minLength(5, 'Минимум 5 символов'))
+  message: string(),
   isAgreed: literal(true, "Необходимо согласие"),
 });
+
+// ✅ вот правильный тип
+export type FormSchema = InferOutput<typeof formSchema>;
