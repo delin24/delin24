@@ -428,7 +428,7 @@ export default function SourcingPage() {
         </div>
         <p className="pt-6 text-xs md:text-xl">
           Звоните <span className="text-[#F7986C]">+7 (391) 205-18-11</span>
-          круглосуточно
+          &nbsp;круглосуточно
         </p>
       </Section>
 
