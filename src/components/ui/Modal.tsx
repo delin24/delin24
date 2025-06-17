@@ -1,7 +1,8 @@
 "use client";
-
+import Image from "next/image";
 import { ReactNode, useEffect, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
+import iconAdd from "@public/icons/iconAdd.png";
 
 interface ModalProps {
   children: ReactNode;
@@ -44,13 +45,28 @@ export default function Modal({ children, isOpen, onClose }: ModalProps) {
 
   return createPortal(
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/75`}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/75"
       onClick={onClose}
     >
       <div
-        className={`relative rounded-xl bg-white p-4 shadow-xl md:p-10`}
+        className="relative rounded-xl bg-white p-4 shadow-xl md:p-10"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Кнопка закрытия */}
+        <button
+          onClick={onClose}
+          aria-label="Закрыть"
+          className="absolute right-4 top-4 cursor-pointer text-2xl text-gray-500 transition hover:text-black md:right-10 md:top-12"
+        >
+          <Image
+            src={iconAdd.src}
+            alt="close_icon"
+            width={32}
+            height={32}
+            className="rotate-45 items-center"
+          />
+        </button>
+
         {children}
       </div>
     </div>,

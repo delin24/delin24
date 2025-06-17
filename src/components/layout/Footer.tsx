@@ -8,18 +8,18 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="items-top col-span-12 select-none justify-between gap-48 rounded-2xl bg-[#48896E] px-4 py-6 md:flex md:px-10 md:py-20">
-      <div className="relative flex h-[14px] w-10 items-start pb-8 md:h-[40px] md:w-[117px]">
-        <Link href="/">
-          <Image
-            src={mainLogo}
-            alt="Логотип"
-            fill
-            sizes="auto"
-            objectFit="contain"
-            unoptimized
-          />
-        </Link>
-      </div>
+      <Link
+        href="/"
+        className="relative flex h-[14px] w-10 items-start pb-8 md:h-[40px] md:w-[117px]"
+      >
+        <Image
+          src={mainLogo}
+          alt="Логотип"
+          fill
+          sizes="auto"
+          className="object-contain"
+        />
+      </Link>
 
       <nav className="flex flex-col gap-2 md:flex-row md:gap-10">
         <div className="">
@@ -68,7 +68,6 @@ const Footer = () => {
                   fill
                   sizes="auto"
                   className="object-cover"
-                  unoptimized
                 />
               </div>
               <p className="select-text">+7 931 205 18 11</p>
@@ -81,7 +80,6 @@ const Footer = () => {
                   fill
                   sizes="auto"
                   className="object-cover"
-                  unoptimized
                 />
               </div>
               <p className="flex select-text items-center">import@delin24.ru</p>

@@ -50,13 +50,7 @@ const MobileMenu = ({
             onClick={(e) => e.stopPropagation()}
           >
             <button onClick={onClose} className="self-end">
-              <Image
-                src={iconClose}
-                alt=""
-                width={32}
-                height={32}
-                unoptimized
-              />
+              <Image src={iconClose} alt="" width={32} height={32} />
             </button>
 
             <Link href="/" onClick={onClose} className="hover:underline">
@@ -80,24 +74,12 @@ const MobileMenu = ({
             <div className="mt-auto flex gap-4">
               <button>
                 <Link href="tel:+73912051811" className="">
-                  <Image
-                    src={iconCall}
-                    alt=""
-                    width={32}
-                    height={32}
-                    unoptimized
-                  />
+                  <Image src={iconCall} alt="" width={32} height={32} />
                 </Link>
               </button>
               <button>
                 <Link href="mailto:import@delin.ru" className="">
-                  <Image
-                    src={iconMail}
-                    alt=""
-                    width={32}
-                    height={32}
-                    unoptimized
-                  />
+                  <Image src={iconMail} alt="" width={32} height={32} />
                 </Link>
               </button>
             </div>

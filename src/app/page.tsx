@@ -145,7 +145,6 @@ export default function Home() {
                 alt={reason.alt}
                 width={48}
                 height={48}
-                unoptimized
               />
               <h3 className="pt-2 font-semibold md:pt-4">{reason.title}</h3>
               <p className="pt-1 md:pt-2">{reason.text}</p>
@@ -169,7 +168,6 @@ export default function Home() {
               alt="3D график"
               className="rounded-2xl object-cover"
               fill
-              unoptimized
             />
           </div>
           <div className="flex flex-1 flex-col">
@@ -234,7 +232,6 @@ export default function Home() {
             alt="Рукопожатие — сотрудничество"
             className="rounded-2xl object-cover"
             fill
-            unoptimized
           />
         </div>
       </div>
@@ -299,9 +296,7 @@ export default function Home() {
               src="/faqImg.jpg"
               alt="Работа за ноутбуком"
               fill
-              priority
               className="rounded-2xl object-cover"
-              unoptimized
             />
           </div>
         </div>
@@ -317,7 +312,6 @@ export default function Home() {
                   alt="Главное изображение"
                   fill
                   className="rounded-2xl object-cover"
-                  unoptimized
                 />
               </div>
               <div className="flex h-full w-full flex-1 gap-2">
@@ -327,7 +321,6 @@ export default function Home() {
                     alt="Главное изображение"
                     fill
                     className="rounded-2xl object-cover"
-                    unoptimized
                   />
                 </div>
                 <div className="relative flex-1">
@@ -336,7 +329,6 @@ export default function Home() {
                     alt="Главное изображение"
                     fill
                     className="rounded-2xl object-cover"
-                    unoptimized
                   />
                 </div>
               </div>

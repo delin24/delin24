@@ -1,4 +1,6 @@
 "use client";
+import Head from "next/head";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/Header";
@@ -28,8 +30,24 @@ export default function RootLayout({
 
   const isOpen = type !== "none";
   return (
-    <html lang="en" className={` ${inter.className} flex justify-center`}>
+    <html lang="ru" className={` ${inter.className} flex justify-center`}>
       <body>
+        <Head>
+          <title>Delin 24 — ВЭД под ключ</title>
+          <meta
+            name="description"
+            content="Аутсорсинг внешнеэкономической деятельности в Красноярске"
+          />
+          <meta property="og:title" content="Delin 24 — ВЭД под ключ" />
+          <meta
+            property="og:description"
+            content="Сопровождение внешнеэкономической деятельности, таможенное оформление, поиск поставщиков"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://delin24.ru/preview.jpg" />
+          <meta property="og:url" content="https://delin24.ru" />
+        </Head>
+
         <div className="flex flex-col justify-center gap-2 px-4 py-2 md:w-[90rem] md:px-16">
           <YandexMetrika
             id={Number(process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID)}

@@ -31,14 +31,7 @@ const Hero: React.FC<HeroProps> = ({
         </h2>
         <Button text={buttonText} onClick={() => open("form")} />
       </div>
-      <Image
-        src={image}
-        alt="main"
-        fill
-        className="-z-10"
-        priority
-        unoptimized
-      />
+      <Image src={image} alt="main" fill className="-z-10" priority />
     </section>
   );
 };

@@ -115,7 +115,6 @@ export default function SourcingPage() {
             fill
             sizes="auto"
             className="rounded-3xl object-cover"
-            unoptimized
           />
         </div>
       </section>
@@ -129,7 +128,6 @@ export default function SourcingPage() {
               sizes="auto"
               fill
               className="rounded-2xl"
-              unoptimized
             />
           </div>
           <div className="flex-1">
@@ -202,7 +200,6 @@ export default function SourcingPage() {
           sizes="auto"
           fill
           className="-z-10 object-cover"
-          unoptimized
         />
       </Section>
 
@@ -241,7 +238,6 @@ export default function SourcingPage() {
               sizes="auto"
               fill
               className="rounded-2xl object-cover"
-              unoptimized
             />
           </div>
         </div>
@@ -282,7 +278,6 @@ export default function SourcingPage() {
                 alt={reason.alt}
                 width={48}
                 height={48}
-                unoptimized
               />
               <h3 className="pt-4 font-semibold">{reason.title}</h3>
               <p className="pt-2">{reason.text}</p>
@@ -322,7 +317,6 @@ export default function SourcingPage() {
                 alt={reason.alt}
                 width={48}
                 height={48}
-                unoptimized
               />
               <h3 className="pt-4 font-semibold">{reason.title}</h3>
               <p className="pt-2">{reason.text}</p>
@@ -354,7 +348,6 @@ export default function SourcingPage() {
             fill
             sizes="auto"
             className="rounded-2xl object-cover"
-            unoptimized
           />
         </div>
       </section>
@@ -429,9 +422,7 @@ export default function SourcingPage() {
               src="/faqImg.jpg"
               alt="Работа за ноутбуком"
               fill
-              priority
               className="rounded-3xl object-cover"
-              unoptimized
             />
           </div>
         </div>
@@ -451,7 +442,6 @@ export default function SourcingPage() {
                   alt="Главное изображение"
                   fill
                   className="rounded-3xl object-cover"
-                  unoptimized
                 />
               </div>
               <div className="flex h-full w-full flex-1 gap-2">
@@ -461,7 +451,6 @@ export default function SourcingPage() {
                     alt="Главное изображение"
                     fill
                     className="rounded-3xl object-cover"
-                    unoptimized
                   />
                 </div>
                 <div className="relative flex-1">
@@ -470,7 +459,6 @@ export default function SourcingPage() {
                     alt="Главное изображение"
                     fill
                     className="rounded-3xl object-cover"
-                    unoptimized
                   />
                 </div>
               </div>

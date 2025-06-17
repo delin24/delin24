@@ -54,13 +54,7 @@ const Header = () => {
         }`}
       >
         <Link href="/" className="w-10 md:w-full">
-          <Image
-            src={mainLogo}
-            alt="Логотип"
-            width={117}
-            height={40}
-            unoptimized
-          />
+          <Image src={mainLogo} alt="Логотип" width={117} height={40} />
         </Link>
 
         <div
@@ -88,7 +82,6 @@ const Header = () => {
                   alt=""
                   fill
                   sizes="auto"
-                  unoptimized
                   className="object-cover"
                 />
               </div>
