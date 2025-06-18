@@ -1,3 +1,4 @@
+"use client";
 import BoxTitle from "@/components/blocks/BoxTitle";
 import Hero from "@/components/blocks/Hero";
 import { Section } from "@/components/blocks/Section";
@@ -26,11 +27,11 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import iconArrow from "@public/icons/iconArrow.png";
 
-export const metadata = {
-  title: "Поиск поставщиков (Sourcing) | Delin",
-  description:
-    "Поможем найти надежных поставщиков для вашего бизнеса. Поиск, проверка и сопровождение — под ключ.",
-};
+// export const metadata = {
+//   title: "Поиск поставщиков (Sourcing) | Delin",
+//   description:
+//     "Поможем найти надежных поставщиков для вашего бизнеса. Поиск, проверка и сопровождение — под ключ.",
+// };
 
 export default function SourcingPage() {
   return (
@@ -41,6 +42,7 @@ export default function SourcingPage() {
         buttonText="Начать поиск"
         image={Hero3.src}
         className="text-[#1B1B1B]"
+        goalId={`p_1`}
       />
 
       <Section>
@@ -111,10 +113,10 @@ export default function SourcingPage() {
         <div className="relative hidden flex-1 md:flex">
           <Image
             src={about8}
-            alt=""
+            alt="about_company_pic"
             fill
             sizes="auto"
-            className="rounded-3xl object-cover"
+            className="rounded-2xl object-cover"
           />
         </div>
       </section>
@@ -127,7 +129,7 @@ export default function SourcingPage() {
               alt=""
               sizes="auto"
               fill
-              className="rounded-2xl"
+              className="rounded-2xl object-cover"
             />
           </div>
           <div className="flex-1">
@@ -193,7 +195,10 @@ export default function SourcingPage() {
           Получите бесплатный расчёт таможенных платежей!
         </h2>
 
-        <FeedbackForm className="mx-4 rounded-2xl bg-amber-50 p-4 text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840] md:mx-[19.375rem] md:p-[2rem]" />
+        <FeedbackForm
+          goalId={`p_1`}
+          className="mx-4 rounded-2xl bg-amber-50 p-4 text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840] md:mx-[19.375rem] md:p-[2rem]"
+        />
         <Image
           src={pic3.src}
           alt="risksImg"
@@ -384,7 +389,11 @@ export default function SourcingPage() {
               ),
             )}
             <a href="/price_list.docx" download>
-              <Button text="Скачать полный прайс" icon={iconArrow.src} />
+              <Button
+                text="Скачать полный прайс"
+                icon={iconArrow.src}
+                goalId={`price`}
+              />
             </a>
           </div>
         </div>

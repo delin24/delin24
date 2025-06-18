@@ -45,6 +45,7 @@ export default function CustomsClearancePage() {
         buttonText="Расчитать стоимость"
         image={clearanceImg.src}
         className="text-[#000000]"
+        goalId={`to_1`}
       />
 
       <Section className="pb-0">
@@ -276,7 +277,10 @@ export default function CustomsClearancePage() {
           Получите бесплатный расчёт таможенных платежей!
         </h2>
 
-        <FeedbackForm className="mx-4 rounded-2xl bg-amber-50 p-4 text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840] md:mx-[19.375rem] md:p-[2rem]" />
+        <FeedbackForm
+          className="mx-4 rounded-2xl bg-amber-50 p-4 text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840] md:mx-[19.375rem] md:p-[2rem]"
+          goalId={`to_2`}
+        />
         <Image
           src={clearanceImg.src}
           alt="risksImg"
@@ -409,6 +413,7 @@ export default function CustomsClearancePage() {
                 text="Оставить заявку"
                 icon={iconArrow.src}
                 onClick={() => open("form")}
+                goalId={`to_3`}
               />
             </div>
           </div>

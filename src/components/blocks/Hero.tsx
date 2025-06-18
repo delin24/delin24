@@ -10,6 +10,7 @@ interface HeroProps {
   buttonText: string;
   image: string;
   className?: string;
+  goalId?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -18,6 +19,7 @@ const Hero: React.FC<HeroProps> = ({
   buttonText,
   image,
   className,
+  goalId,
 }) => {
   const { open } = useModalStore();
   return (
@@ -29,7 +31,11 @@ const Hero: React.FC<HeroProps> = ({
         <h2 className="w-4/5 text-xs md:w-2/3 md:pb-6 md:text-xl">
           {subtitle}
         </h2>
-        <Button text={buttonText} onClick={() => open("form")} />
+        <Button
+          text={buttonText}
+          onClick={() => open("form")}
+          goalId={goalId}
+        />
       </div>
       <Image src={image} alt="main" fill className="-z-10" priority />
     </section>

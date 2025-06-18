@@ -6,7 +6,13 @@ import Button from "./Button";
 import toast from "react-hot-toast";
 import { useModalStore } from "@/stores/useModalStore";
 
-const Form = ({ className = "text-[#EFEFEF]" }) => {
+const Form = ({
+  className = "text-[#EFEFEF]",
+  goalId,
+}: {
+  className?: string;
+  goalId?: string;
+}) => {
   const { open } = useModalStore();
 
   const {
@@ -105,34 +111,34 @@ const Form = ({ className = "text-[#EFEFEF]" }) => {
         />
       </div>
 
-      <label className="inline-flex cursor-pointer items-center gap-4 pb-4">
-        <span className="relative">
-          <input
-            type="checkbox"
-            {...register("isAgreed")}
-            className="peer absolute left-0 top-0 h-[20px] w-[20px] opacity-0 md:h-[2rem] md:w-[2rem]"
-          />
-          <span className="block h-[20px] w-[20px] rounded-lg border-2 border-[#F7986C] transition-all peer-checked:bg-[#F7986C] md:h-[2rem] md:w-[2rem]" />
-        </span>
-
-        <span className="text-[10px] font-normal md:text-[1rem]">
-          Я ознакомлен и согласен с&nbsp;
-          <button
-            type="button"
-            onClick={() => open("policy")}
-            className="underline hover:text-orange-500"
-          >
-            политикой конфиденциальности
-          </button>
-        </span>
-      </label>
-
-      {errors.isAgreed && (
-        <p className="text-xs text-red-500">{errors.isAgreed.message}</p>
-      )}
+      <div className="pb-4">
+        <label className="inline-flex cursor-pointer items-center gap-4">
+          <span className="relative">
+            <input
+              type="checkbox"
+              {...register("isAgreed")}
+              className="peer absolute left-0 top-0 h-[20px] w-[20px] opacity-0 md:h-[2rem] md:w-[2rem]"
+            />
+            <span className="block h-[20px] w-[20px] rounded-lg border-2 border-[#F7986C] transition-all peer-checked:bg-[#F7986C] md:h-[2rem] md:w-[2rem]" />
+          </span>
+          <span className="text-[10px] font-normal md:text-[1rem]">
+            Я ознакомлен и согласен с&nbsp;
+            <button
+              type="button"
+              onClick={() => open("policy")}
+              className="underline hover:text-orange-500"
+            >
+              политикой конфиденциальности
+            </button>
+          </span>
+        </label>
+        {errors.isAgreed && (
+          <p className="text-xs text-red-500">{errors.isAgreed.message}</p>
+        )}
+      </div>
 
       <div className="flex justify-center">
-        <Button text="Отправить" disabled={isSubmitting} />
+        <Button text="Отправить" disabled={isSubmitting} goalId={goalId} />
       </div>
     </form>
   );

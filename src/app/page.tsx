@@ -38,6 +38,7 @@ export default function Home() {
         buttonText="Оставить заявку"
         image={mainCTA.src}
         className="text-[#EFEFEF]"
+        goalId={`ved_1`}
       />
 
       <Section>
@@ -99,6 +100,7 @@ export default function Home() {
           text="Получить консультацию"
           icon={iconArrow.src}
           onClick={() => open("form")}
+          goalId={`ved_2`}
         />
       </Section>
 
@@ -155,6 +157,7 @@ export default function Home() {
           text="Оставить заявку"
           icon={iconArrow.src}
           onClick={() => open("form")}
+          goalId={`ved_3`}
         />
       </Section>
 
@@ -370,7 +373,7 @@ export default function Home() {
             Оставьте заявку — и мы подберём для вас лучшее решение!
           </h2>
           <div className="md:px-[18.5rem]">
-            <FeedbackForm />
+            <FeedbackForm goalId={`ved_4`} />
           </div>
         </div>
       </Section>
