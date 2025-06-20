@@ -85,7 +85,7 @@ export default function Home() {
             {
               icon: iconCreate.src,
               alt: "iconCreate",
-              text: "Таможенное декларирование (снижаем пошлины, избегаем штрафов)",
+              text: "Таможенное декларирование (избегаем штрафов)",
             },
             {
               icon: iconPuzzle.src,

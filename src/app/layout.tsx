@@ -14,6 +14,7 @@ import Policy from "@/components/blocks/Policy";
 import { YandexMetrika } from "@/components/YandexMetrika";
 import { useMobileMenuStore } from "@/stores/useMobileMenuStore";
 import MobileMenu from "@/components/layout/MobileMenu";
+import { useEffect } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,6 +28,10 @@ export default function RootLayout({
 }>) {
   const { type, close } = useModalStore();
   const { isOpen: isMenuOpen, close: closeMenu } = useMobileMenuStore();
+
+  useEffect(() => {
+    document.title = "Delin 24";
+  }, []);
 
   const isOpen = type !== "none";
   return (

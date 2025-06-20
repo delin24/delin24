@@ -66,7 +66,10 @@ const Header = () => {
           <div className="h-0.5 w-6 rounded-2xl bg-gray-200"></div>
         </div>
 
-        <nav className="hidden items-center gap-20 text-xl font-normal md:flex">
+        <nav className="hidden items-center gap-16 text-xl font-normal md:flex">
+          <Link href="/" className="hover:text-gray-200">
+            ВЭД
+          </Link>
           <Link href="/customs-clearance" className="hover:text-gray-200">
             Таможенное&nbsp;оформление
           </Link>
