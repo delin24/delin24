@@ -6,14 +6,14 @@ import Button from "./Button";
 import toast from "react-hot-toast";
 import { useModalStore } from "@/stores/useModalStore";
 
-const Form = ({
-  className = "text-[#EFEFEF]",
-  goalId,
-}: {
+interface FormProps {
   className?: string;
-  goalId?: string;
-}) => {
-  const { open } = useModalStore();
+  formGoalId?: string;
+}
+
+const Form = ({ className = "text-[#EFEFEF]", formGoalId }: FormProps) => {
+  const { goalId } = useModalStore();
+  const effectiveGoalId = goalId || formGoalId || "default_form";
 
   const {
     register,
@@ -51,7 +51,12 @@ const Form = ({
         error: "Ошибка при отправке. Попробуйте позже.",
       });
 
-      reset(); // очищает форму
+      if (effectiveGoalId) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).ym?.(102461963, "reachGoal", effectiveGoalId);
+      }
+
+      reset();
     } catch (error) {
       console.error("Ошибка отправки:", error);
       toast.error("Ошибка при отправке. Попробуйте позже.");
@@ -138,7 +143,7 @@ const Form = ({
       </div>
 
       <div className="flex justify-center">
-        <Button text="Отправить" disabled={isSubmitting} goalId={goalId} />
+        <Button text="Отправить" disabled={isSubmitting} type="submit" />
       </div>
     </form>
   );

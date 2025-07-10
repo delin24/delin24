@@ -279,7 +279,7 @@ export default function CustomsClearancePage() {
 
         <FeedbackForm
           className="mx-4 rounded-2xl bg-amber-50 p-4 text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840] md:mx-[19.375rem] md:p-[2rem]"
-          goalId={`to_2`}
+          formGoalId="to_2"
         />
         <Image
           src={clearanceImg.src}
@@ -412,8 +412,7 @@ export default function CustomsClearancePage() {
               <Button
                 text="Оставить заявку"
                 icon={iconArrow.src}
-                onClick={() => open("form")}
-                goalId={`to_3`}
+                onClick={() => open("form", `to_3`)}
               />
             </div>
           </div>

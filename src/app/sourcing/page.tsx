@@ -196,7 +196,7 @@ export default function SourcingPage() {
         </h2>
 
         <FeedbackForm
-          goalId={`p_1`}
+          formGoalId={`p_1`}
           className="mx-4 rounded-2xl bg-amber-50 p-4 text-[#1B1B1B] shadow-2xl shadow-[#2D2D5840] md:mx-[19.375rem] md:p-[2rem]"
         />
         <Image
@@ -392,7 +392,10 @@ export default function SourcingPage() {
               <Button
                 text="Скачать полный прайс"
                 icon={iconArrow.src}
-                goalId={`price`}
+                onClick={() => {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (window as any).ym?.(102461963, "reachGoal", "price");
+                }}
               />
             </a>
           </div>

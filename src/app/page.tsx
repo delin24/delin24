@@ -99,8 +99,7 @@ export default function Home() {
         <Button
           text="Получить консультацию"
           icon={iconArrow.src}
-          onClick={() => open("form")}
-          goalId={`ved_2`}
+          onClick={() => open("form", `ved_2`)}
         />
       </Section>
 
@@ -156,8 +155,7 @@ export default function Home() {
         <Button
           text="Оставить заявку"
           icon={iconArrow.src}
-          onClick={() => open("form")}
-          goalId={`ved_3`}
+          onClick={() => open("form", `ved_3`)}
         />
       </Section>
 
@@ -373,7 +371,7 @@ export default function Home() {
             Оставьте заявку — и мы подберём для вас лучшее решение!
           </h2>
           <div className="md:px-[18.5rem]">
-            <FeedbackForm goalId={`ved_4`} />
+            <FeedbackForm formGoalId="ved_4" />
           </div>
         </div>
       </Section>
